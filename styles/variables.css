@@ -1,0 +1,84 @@
+html {
+    --_accent-light: hsl(210 100% 40%);
+    --_accent-dark: hsl(210 50% 70%);
+    --_accent: var(--_accent-light);
+
+    --_bg-light: hsl(0 0% 100%);
+    --_bg-dark: hsl(210 9% 31%);
+    --_bg: var(--_bg-light);
+
+    --_html-bg-light: hsl(210deg 17% 98%);
+    --_html-bg-dark: hsl(210deg 11% 15%);
+    --_html-bg: var(--_html-bg-light);
+
+    --_input-well-light: hsl(210 16% 87%);
+    --_input-well-dark: hsl(204 10% 15%);
+    --_input-well: var(--_input-well-light);
+
+    --_padding-inline: 1.75ch;
+    --_padding-block: .75ch;
+
+    --_border-radius: .5ch;
+    --_border-light: hsl(210 14% 89%);
+    --_border-dark: var(--_bg-dark);
+    --_border: var(--_border-light);
+
+    --_highlight-size: 0;
+    --_highlight-light: hsl(210 10% 71% / 25%);
+    --_highlight-dark: hsl(210 10% 5% / 25%);
+    --_highlight: var(--_highlight-light);
+
+    --_ink-shadow-light: 0 1px 0 var(--_border-light);
+    --_ink-shadow-dark: 0 1px 0 hsl(210 11% 15%);
+    --_ink-shadow: var(--_ink-shadow-light);
+
+    --_section-bg-light: hsl(210deg 16% 93%);
+    --_section-bg-dark: hsl(210deg 10% 23%);
+    --_section-bg: var(--_section-bg-light);
+
+    --_section-border-color-light: hsl(210deg 14% 89%);
+    --_section-border-color-dark: hsl(210deg 9% 31%);
+    --_section-border-color: var(--_section-border-color-light);
+
+    --_shadow-color-light: 220 3% 15%;
+    --_shadow-color-dark: 220 40% 2%;
+    --_shadow-color: var(--_shadow-color-light);
+    --_shadow-strength-light: 1%;
+    --_shadow-strength-dark: 25%;
+    --_shadow-strength: var(--_shadow-strength-light);
+    --_shadow-1: 0 1px 2px -1px hsl(var(--_shadow-color)/calc(var(--_shadow-strength) + 9%));
+    --_shadow-2: 0 3px 5px -2px hsl(var(--_shadow-color)/calc(var(--_shadow-strength) + 3%)),0 7px 14px -5px hsl(var(--_shadow-color)/calc(var(--_shadow-strength) + 5%));
+
+    --_shadow-depth-light: 0 1px var(--_border-light);
+    --_shadow-depth-dark: 0 1px var(--_bg-dark);
+    --_shadow-depth: var(--_shadow-depth-light);
+
+    --_transition-motion-reduce: ;
+    --_transition-motion-ok:
+            box-shadow 145ms ease,
+            outline-offset 145ms ease
+;
+    --_transition: var(--_transition-motion-reduce);
+
+    --_text-light: hsl(210 10% 30%);
+    --_text-dark: hsl(0, 1%, 85%);
+    --_text: var(--_text-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --_accent: var(--_accent-dark);
+        --_bg: var(--_bg-dark);
+        --_border: var(--_border-dark);
+        --_highlight: var(--_highlight-dark);
+        --_html-bg: var(--_html-bg-dark);
+        --_input-well: var(--_input-well-dark);
+        --_ink-shadow: var(--_ink-shadow-dark);
+        --_section-bg: var(--_section-bg-dark);
+        --_section-border-color: var(--_section-border-color-dark);
+        --_shadow-depth: var(--_shadow-depth-dark);
+        --_shadow-color: var(--_shadow-color-dark);
+        --_shadow-strength: var(--_shadow-strength-dark);
+        --_text: var(--_text-dark);
+    }
+}

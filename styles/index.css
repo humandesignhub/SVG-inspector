@@ -1,0 +1,102 @@
+@import "variables.css";
+
+html {
+    block-size: 100%;
+    font-family: system-ui, sans-serif;
+    background-color: var(--_html-bg);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    min-block-size: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 5vmin;
+    padding-inline: 5vmin;
+    padding-block: 5vmin;
+    color: var(--_text);
+}
+@media (max-width: 720px) {
+    body {
+        padding-block: 10vmin;
+        flex-direction: column;
+    }
+}
+
+body, h2, p {
+    margin: 0;
+}
+
+section {
+    background: var(--_section-bg);
+    border: 1px solid var(--_section-border-color);
+    border-radius: .5ch;
+    width: 50%;
+    padding: 1rem;
+}
+
+:where(article) {
+    padding: 0.3rem;
+    height: 100%;
+}
+
+:where(
+  button,
+  input[type="file"]
+),
+:where(input[type="file"])::file-selector-button {
+    font: inherit;
+    letter-spacing: inherit;
+    line-height: 1.5;
+    border-radius: var(--_border-radius);
+}
+
+:where(
+  button
+),
+:where(input[type="file"])::file-selector-button {
+    cursor: pointer;
+    touch-action: manipulation;
+
+    font-size: 1rem;
+    background: var(--_bg);
+    color: var(--_text);
+    border: 2px solid var(--_border);
+    box-shadow:
+            var(--_shadow-2),
+            var(--_shadow-depth),
+            0 0 0 var(--_highlight-size) var(--_highlight)
+;
+    text-shadow: var(--_ink-shadow);
+    transition: var(--_transition);
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1ch;
+
+    font-weight: 700;
+    padding-block: var(--_padding-block);
+    padding-inline: var(--_padding-inline);
+
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+
+    margin-inline-end: var(--_padding-inline);
+    appearance: none;
+}
+
+:where(input[type="file"]) {
+    inline-size: 100%;
+    max-inline-size: max-content;
+    background-color: var(--_input-well);
+    margin-bottom: 2ch;
+}
+
