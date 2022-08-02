@@ -40,6 +40,11 @@ section {
     padding: 1rem;
 }
 
+[contenteditable]:focus {
+    outline: none;
+    backdrop-filter: brightness(90%);
+}
+
 :where(article) {
     padding: 0.3rem;
     height: 100%;
@@ -100,3 +105,45 @@ section {
     margin-bottom: 2ch;
 }
 
+.tooltip {
+    background-color: var(--_input-well);
+    border-radius: var(--_border-radius);
+    padding: .5ch;
+    position: relative;
+    line-height: 1.5;
+}
+
+.tooltip:hover::before {
+    all: initial;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    border-radius: var(--_border-radius);
+    padding: 1ch;
+    background-color: var(--_html-bg);
+    content: attr(data-tooltip);
+    color: var(--_text);
+    position: absolute;
+    bottom: 100%;
+    max-width: 50vw;
+    width: max-content;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.tooltip:hover::after {
+    all: initial;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--_html-bg);
+    position: absolute;
+    bottom: 100%;
+    content: '';
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 5px;
+}
